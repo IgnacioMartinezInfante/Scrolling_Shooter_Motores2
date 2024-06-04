@@ -11,10 +11,10 @@ public class Fondo_Movimiento : MonoBehaviour
     void Update()
     {
         // Mueve el segmento hacia la posición final
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
         // Si el segmento llega a la posición final, lo regresa a la posición inicial
-        if (transform.position.z <= endPosition.z)
+        if (transform.position.x <= endPosition.x)
         {
             transform.position = startPosition;
         }

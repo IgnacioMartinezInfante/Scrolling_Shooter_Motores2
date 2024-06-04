@@ -25,8 +25,10 @@ public class Movimiento_Player : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        
+
         // Calcula el movimiento
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed;
+        Vector3 movement = new Vector3(moveVertical, 0.0f, -moveHorizontal) * moveSpeed;
 
         // Aplica fuerza al Rigidbody para mover la nave
         rb.AddForce(movement);
