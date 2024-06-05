@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2433322576179970015}
   - component: {fileID: 8751972717683157040}
   - component: {fileID: 2272010957369954821}
+  - component: {fileID: 2555761189478361937}
   m_Layer: 0
   m_Name: Piedra_blanca2
   m_TagString: Boulder
@@ -105,3 +106,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2555761189478361937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096780746535507877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc1a557b7bf6d14f810b33eac349756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  endPosition: {x: -8, y: 0, z: 0}

@@ -121,4 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   startPosition: {x: 20, y: 0, z: 0}
-  endPosition: {x: -16.24789, y: 0, z: 0}
+  endPosition: {x: -16, y: 0, z: 0}
