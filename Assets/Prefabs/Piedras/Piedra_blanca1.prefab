@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3896452190201489049}
   - component: {fileID: 8954835848827425761}
   - component: {fileID: 1351160189850887859}
+  - component: {fileID: -8641118416863870845}
   m_Layer: 0
   m_Name: Piedra_blanca1
-  m_TagString: Boulder
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.80962133, y: 0.5, z: -8.004298}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,3 +121,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   endPosition: {x: -8, y: 0, z: 0}
+  vida: 5
+--- !u!65 &-8641118416863870845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038644550722818269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.71883607, y: 0.7612472, z: 0.699877}
+  m_Center: {x: 0.014641419, y: 0.027341455, z: -0.0026054382}
