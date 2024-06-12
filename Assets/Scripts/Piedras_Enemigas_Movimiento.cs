@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piedras_Enemigas_Movimiento : MonoBehaviour, IDaño
+public class Piedras_Enemigas_Movimiento : MonoBehaviour, IDaño, IDañoJugador
 {
     public float speed = 5f; // Velocidad del movimiento del fondo
     public Vector3 endPosition; // Posición final del segmento.
     public float vida = 5;
+    public float daño = 10f; // Daño que este enemigo inflige al jugador
 
     void Update()
     {
@@ -27,6 +28,12 @@ public class Piedras_Enemigas_Movimiento : MonoBehaviour, IDaño
             Destroy();
         }
     }
+
+    public float ObtenerDaño()
+    {
+        return daño;
+    }
+
     private void Destroy()
     {
         Destroy(gameObject);

@@ -10,6 +10,12 @@ public class Movimiento_Player : MonoBehaviour
     public float maxSpeed = 5f; // Velocidad máxima
     public float brakeSpeed = 5f; // Velocidad de frenado
 
+    // Límites del movimiento del jugador en los ejes X y Z
+    public float minX = -5f;
+    public float maxX = 5f;
+    public float minZ = -5f;
+    public float maxZ = 5f;
+
     private Rigidbody rb;
     private Quaternion originalRotation;
 
@@ -24,8 +30,6 @@ public class Movimiento_Player : MonoBehaviour
         // Captura el input del jugador
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-
-        
 
         // Calcula el movimiento
         Vector3 movement = new Vector3(moveVertical, 0.0f, -moveHorizontal) * moveSpeed;
@@ -44,6 +48,12 @@ public class Movimiento_Player : MonoBehaviour
         {
             rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, brakeSpeed * Time.deltaTime);
         }
+
+        // Limita la posición del jugador dentro de los límites especificados
+        Vector3 clampedPosition = transform.position;
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, minX, maxX);
+        clampedPosition.z = Mathf.Clamp(clampedPosition.z, minZ, maxZ);
+        transform.position = clampedPosition;
 
         // Calcula la rotación objetivo
         float tiltZ = moveHorizontal * -rotationAmount;
