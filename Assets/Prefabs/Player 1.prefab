@@ -158,6 +158,10 @@ MonoBehaviour:
   rotationSpeed: 7
   maxSpeed: 5
   brakeSpeed: 5
+  minX: -5
+  maxX: 5
+  minZ: -5
+  maxZ: 5
 --- !u!54 &1036731824987342700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -212,4 +216,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e03712ff8f757642b6d46d3c5584208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 30
+  vidamaxima: 100
+  vidaactual: 0

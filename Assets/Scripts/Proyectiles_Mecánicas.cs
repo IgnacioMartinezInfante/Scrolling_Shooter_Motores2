@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Proyectiles_Mecánicas : MonoBehaviour
 {
     public float speed = 20f; // Velocidad de la bala
     public float lifeTime = 5f; // Tiempo de vida de la bala antes de ser destruida
@@ -37,9 +37,5 @@ public class NewBehaviourScript : MonoBehaviour
             // Destruye la bala
             Destroy(gameObject);
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 }

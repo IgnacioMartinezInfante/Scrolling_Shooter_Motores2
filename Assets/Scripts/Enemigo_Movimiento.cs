@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo_Movimiento : MonoBehaviour
+public class Enemigo_Movimiento : MonoBehaviour, IDaño
 {
     public float velocidad = 5f; // Velocidad de movimiento del enemigo en el eje X
     public float puntoDeFrenoX = 10f; // Punto donde el enemigo debe frenar en el eje X
     private bool frenando = false;
+    public float vida = 5;
 
     void Update()
     {
@@ -24,6 +25,14 @@ public class Enemigo_Movimiento : MonoBehaviour
             {
                 frenando = true;
             }
+        }
+    }
+    public void RecibirDaño(float damage)
+    {
+        vida -= damage;
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
