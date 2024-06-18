@@ -448,6 +448,14 @@ PrefabInstance:
       propertyPath: fireRate
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 281729732950113183, guid: 3a62846fbe824d84991b69b921bfe276, type: 3}
+      propertyPath: firePoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281729732950113183, guid: 3a62846fbe824d84991b69b921bfe276, type: 3}
+      propertyPath: firePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 598942821}
     - target: {fileID: 1036731824987342700, guid: 3a62846fbe824d84991b69b921bfe276, type: 3}
       propertyPath: m_Constraints
       value: 0
@@ -1650,6 +1658,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6212981939866217444, guid: 0cebaea90e59d5d49b61c64d807039bf, type: 3}
   m_PrefabInstance: {fileID: 2116680478}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &598942821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8349632087646921474, guid: 3a62846fbe824d84991b69b921bfe276, type: 3}
+  m_PrefabInstance: {fileID: 117318441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &619654876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2849,63 +2862,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04cae48bf35b93429e294cd9cee7056, type: 3}
---- !u!1001 &1133038604
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.9693146
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -22.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154703244568498779, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783042612740966625, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
-      propertyPath: m_Name
-      value: ComPlaneV3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a4952846ba09894b99aeabfdafb8ec0, type: 3}
 --- !u!4 &1153193436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6212981939866217444, guid: 0cebaea90e59d5d49b61c64d807039bf, type: 3}
@@ -4633,6 +4589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigosToSpawn:
   - {fileID: 4026247853210846184, guid: b63d66975690c094ba357aed40b1308c, type: 3}
+  bossToSpawn: {fileID: 3256264483427572323, guid: c55ddbf29b1ba4a4a85a9ea470fcef58, type: 3}
   spawnInterval: 3
   spawnPositions:
   - {x: 13.8, y: 0.5, z: 8}
@@ -4641,6 +4598,7 @@ MonoBehaviour:
   - {x: 13.8, y: 0.5, z: -1}
   - {x: 13.8, y: 0.5, z: -4}
   - {x: 13.8, y: 0.5, z: -7}
+  bossSpawnPosition: {x: 13.8, y: 0.3, z: 1.5}
 --- !u!4 &1823087653
 Transform:
   m_ObjectHideFlags: 0
@@ -5607,7 +5565,6 @@ SceneRoots:
   - {fileID: 3090231748059741885}
   - {fileID: 1369118397}
   - {fileID: 1342491764}
-  - {fileID: 1133038604}
   - {fileID: 117318441}
   - {fileID: 385619857}
   - {fileID: 782628377}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Proyectiles_Player : MonoBehaviour
 {
     public GameObject projectilePrefab; // Prefab del proyectil
-    public Transform firePoint; // Punto de disparo
+    public List<Transform> firePoints; // Lista de puntos de disparo
     public float fireRate = 0.5f; // Frecuencia de disparo en segundos
 
     private float nextFireTime = 0f; // Tiempo para el siguiente disparo
@@ -25,12 +25,20 @@ public class Proyectiles_Player : MonoBehaviour
     {
         if (fireMode == 1)
         {
-            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            // Dispara un proyectil desde cada punto de disparo
+            foreach (Transform firePoint in firePoints)
+            {
+                Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            }
         }
         else if (fireMode == 2)
         {
-            Instantiate(projectilePrefab, firePoint.position + new Vector3(-0.5f, 0, 0), firePoint.rotation);
-            Instantiate(projectilePrefab, firePoint.position + new Vector3(0.5f, 0, 0), firePoint.rotation);
+            // Dispara dos proyectiles desde cada punto de disparo
+            foreach (Transform firePoint in firePoints)
+            {
+                Instantiate(projectilePrefab, firePoint.position + new Vector3(-0.5f, 0, 0), firePoint.rotation);
+                Instantiate(projectilePrefab, firePoint.position + new Vector3(0.5f, 0, 0), firePoint.rotation);
+            }
         }
     }
 

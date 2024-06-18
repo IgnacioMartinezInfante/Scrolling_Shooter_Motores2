@@ -8,6 +8,13 @@ public class Enemigo_Movimiento : MonoBehaviour, IDaño
     public float puntoDeFrenoX = 10f; // Punto donde el enemigo debe frenar en el eje X
     private bool frenando = false;
     public float vida = 5;
+    private Spawner_Naves_Enemigas spawner; // Referencia al spawner
+
+    void Start()
+    {
+        // Encuentra el objeto Spawner_Naves_Enemigas en la escena
+        spawner = FindObjectOfType<Spawner_Naves_Enemigas>();
+    }
 
     void Update()
     {
@@ -32,6 +39,9 @@ public class Enemigo_Movimiento : MonoBehaviour, IDaño
         vida -= damage;
         if (vida <= 0)
         {
+            // Notifica al spawner que esta nave ha sido destruida
+            spawner.NaveDestruida();
+
             Destroy(gameObject);
         }
     }
