@@ -6,12 +6,14 @@ public class Vida_Player : MonoBehaviour
 {
     public float vidamaxima = 100f;
     public float vidaactual;
+    public GameObject gameoverCanvas;
 
     private void Start()
     {
         vidaactual = vidamaxima; // Vida del jugador
+        gameoverCanvas.SetActive(false);
     }
-
+    
     // Método para recibir daño
     public void RecibirDaño(float daño)
     {
@@ -22,6 +24,8 @@ public class Vida_Player : MonoBehaviour
         {
             // Aquí puedes agregar lógica para cuando el jugador muere
             Debug.Log("El jugador ha muerto.");
+            gameoverCanvas.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
