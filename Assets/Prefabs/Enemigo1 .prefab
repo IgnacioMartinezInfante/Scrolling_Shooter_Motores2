@@ -325,7 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 10
   puntoDeFrenoX: 10
-  vida: 20
+  vida: 15
 --- !u!54 &8849673921591568165
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3576172465857473878, guid: d81cd3797d9ff694b9b664f20dc9883d, type: 3}
   firePoints:
   - {fileID: 1661731044876687627}
-  fireRate: 0.5
+  fireRate: 2
 --- !u!1 &4172447076560297094
 GameObject:
   m_ObjectHideFlags: 0

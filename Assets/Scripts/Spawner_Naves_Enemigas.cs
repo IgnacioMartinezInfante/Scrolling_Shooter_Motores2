@@ -15,8 +15,11 @@ public class Spawner_Naves_Enemigas : MonoBehaviour
     private int navesDestruidas = 0; // Contador de naves destruidas
     private bool bossDestruido = false;
 
+    public GameObject victoryCanvas;
+
     void Start()
     {
+        victoryCanvas.SetActive(false);
         // Inicializa la lista de posiciones disponibles con las posiciones de spawn iniciales
         posicionesDisponibles = new List<Vector3>(spawnPositions);
 
@@ -78,6 +81,8 @@ public class Spawner_Naves_Enemigas : MonoBehaviour
         if (navesDestruidas > 6)
         {
             Debug.Log("Juego terminado");
+            victoryCanvas.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
