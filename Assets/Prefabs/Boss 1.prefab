@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afeaf492cead2449ac1a50b3bb84b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3576172465857473878, guid: d81cd3797d9ff694b9b664f20dc9883d, type: 3}
+  projectilePrefab: {fileID: 1322041506407671053, guid: 6dd1a81766a76cf40a4dfbe0111a025f, type: 3}
   firePoints:
   - {fileID: 3764904315520720455}
   - {fileID: 6432353254021887823}
